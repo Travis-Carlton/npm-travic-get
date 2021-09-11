@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build:
-    name: Build
+  build-test-publish:
+    name: Build - Test - Publish
     strategy:
       matrix:
         node-version: [14.x]
@@ -25,10 +25,10 @@ jobs:
         env:
           CI: true
       - name: Install build dependencies and build
-        run: npm i && npm run build
-      - name: Run tests
-        run: npm run test:badges
-      - name: build & publish
-        run: npm run pub
+        run: |
+            npm i
+            npm run build
+            npm test
+            npm run pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

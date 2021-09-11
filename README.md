@@ -2,11 +2,16 @@
 
 [![ci](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/@travic%2Fget.svg)](https://badge.fury.io/js/@travic%2Fget)
-[![branches]](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/coverage/badge-branches.svg)
+[![npm](https://img.shields.io/npm/dw/@travic%2Fget.svg)](https://www.npmjs.com/package/@travic%2Fget)
+
+![Coverage lines](https://img.shields.io/badge/Coverage:lines-100-blue.svg)
+![Coverage functions](https://img.shields.io/badge/Coverage:functions-100-blue.svg)
+![Coverage branches](https://img.shields.io/badge/Coverage:branches-100-blue.svg)
+![Coverage statements](https://img.shields.io/badge/Coverage:statements-100-blue.svg)
 
 ```ruby
 npm i @travic/get
-// or
+or
 yarn add @travic/get
 ```
 
@@ -16,8 +21,6 @@ To use, `import` or `require` package;
 import { get } from '@travic/get';
 // or
 const { get } = require('@travic/get');
-
-// ...
 
 // example use
 
@@ -30,19 +33,19 @@ const obj = {
 	d: [1, 2, 3],
 };
 
-console.log(get(obj, 'a')); // -> 'string'
+get(obj, 'a'); // -> 'string'
 
-console.log(get(obj, 'b')); // -> true
+get(obj, 'b'); // -> true
 
-console.log(get(obj, 'c')); // -> { aa: 'aa' }
+get(obj, 'c'); // -> { aa: 'aa' }
 
-console.log(get(obj, 'c.aa')); // -> 'another string'
+get(obj, 'c.aa'); // -> 'another string'
 
-console.log(get(obj, 'c.aa.aaa')); // -> null
+get(obj, 'c.aa.aaa'); // -> null
 
-console.log(get(obj, 'c.aa.aaa', "It's not here!")); // -> "It's not here!"
+get(obj, 'c.aa.aaa', "It's not here!"); // -> "It's not here!"
 
-console.log(get(obj, 'd.1')); // -> 2
+get(obj, 'd.1'); // -> 2
 
-console.log(get(1, 'd.1')); // -> null
+get(1, 'd.1'); // -> null
 ```
