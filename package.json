@@ -1,11 +1,12 @@
 {
 	"name": "@travic/get",
-	"version": "1.0.4",
-	"description": "",
-	"main": "lib/index.js",
-	"types": "lib",
+	"version": "1.0.5",
+	"description": "A helper function when trying to access nested keys",
+	"main": "lib/src",
+	"types": "lib/src",
 	"scripts": {
 		"build": "tsc -p .",
+		"test": "jest",
 		"pub-pat": "npm run build && npm version patch && npm run pub",
 		"pub-min": "npm run build && npm version minor && npm run pub",
 		"pub-maj": "npm run build && npm version major && npm run pub",
@@ -16,9 +17,31 @@
 		"get",
 		"get value of property"
 	],
-	"author": "",
+	"author": "Travis Carlton",
+	"homepage": "https://github.com/Travis-Carlton/npm-travic-get",
+	"bugs": "https://github.com/Travis-Carlton/npm-travic-get/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Travis-Carlton/npm-travic-get"
+	},
 	"license": "ISC",
+	"jest": {
+		"testPathIgnorePatterns": [
+			"lib"
+		]
+	},
 	"devDependencies": {
+		"@babel/core": "^7.12.17",
+		"@babel/preset-env": "^7.12.17",
+		"@babel/preset-typescript": "^7.12.17",
+		"@types/jest": "^26.0.22",
+		"@types/node": "^14.14.30",
+		"@types/node-fetch": "^2.5.12",
+		"babel-jest": "^26.6.3",
+		"jest": "^26.6.3",
 		"typescript": "^3.9.5"
-	}
+	},
+	"files": [
+		"lib/src/"
+	]
 }
