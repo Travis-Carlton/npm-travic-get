@@ -40,3 +40,7 @@ test('getting the value of "c.aa.aaa" in obj with a default value should be the 
 test('getting the value of "d.1" in obj should be 2', () => {
 	expect(get(obj, "d.1")).toEqual(2);
 });
+
+test('getting the value of "e.a" in obj should be specified default value and the error should be logged', () => {
+	expect(get(obj, "e.a", -1, false)).toEqual(-1);
+});

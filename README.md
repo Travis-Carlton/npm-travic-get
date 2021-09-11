@@ -1,5 +1,9 @@
 # GET
 
+[![ci](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/@travic%2Fget.svg)](https://badge.fury.io/js/@travic%2Fget)
+[![branches]](https://github.com/Travis-Carlton/npm-travic-get/actions/workflows/coverage/badge-branches.svg)
+
 ```ruby
 npm i @travic/get
 // or

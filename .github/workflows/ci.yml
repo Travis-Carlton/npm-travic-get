@@ -27,7 +27,7 @@ jobs:
       - name: Install build dependencies and build
         run: npm i && npm run build
       - name: Run tests
-        run: npm test
+        run: npm run test:badges
       - name: build & publish
         run: npm run pub
         env:
